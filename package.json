@@ -1,7 +1,7 @@
 {
-  "name": "aqua",
-  "version": "6.4.0",
-  "description": "A website and user system for Node.js",
+  "name": "MrOffice.io",
+  "version": "0.0.1",
+  "description": "Your ears made a commit",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -11,10 +11,10 @@
     "test-server": "lab -v -t 99 -S -T ./test/lab/transform $TEST_TARGET ./test/lab/server-after.js || true",
     "postinstall": "gulp build"
   },
-  "author": "Reza Akhavan <jedireza@gmail.com> (http://reza.akhavan.me/)",
+  "author": "Mr. Office",
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": "6.9.1"
   },
   "dependencies": {
     "async": "2.x.x",
