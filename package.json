@@ -1,0 +1,28 @@
+{
+  "name": "mroffice.io",
+  "version": "0.0.1",
+  "description": "mroffice.io",
+  "main": "index.js",
+  "dependencies": {
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "susy": "^2.2.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydrotik/mroffice.io.git"
+  },
+  "keywords": [
+    "mroffice.io"
+  ],
+  "author": "mr. office",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hydrotik/mroffice.io/issues"
+  },
+  "homepage": "https://github.com/hydrotik/mroffice.io#readme"
+}
