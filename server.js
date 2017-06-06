@@ -9,15 +9,28 @@ server.connection({
     port: 8000 
 });
 
-// Add the route
+// Routes
+
 server.route({
     method: 'GET',
-    path:'/hello', 
+    path: '/',
     handler: function (request, reply) {
-
-        return reply('hello world');
+        reply('Hello, Mr. World!');
     }
 });
+
+
+server.route({
+    method: 'GET',
+    path: '/{name}',
+    handler: function (request, reply) {
+        reply('Hello, Mr. ' + encodeURIComponent(capitalizeFirstLetter(request.params.name)) + '!');
+    }
+});
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 // Start the server
 server.start((err) => {
