@@ -2,8 +2,9 @@
   "name": "mroffice.io",
   "version": "0.0.1",
   "description": "mroffice.io",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
+    "hapi": "^16.4.1",
     "susy": "^2.2.12"
   },
   "devDependencies": {
