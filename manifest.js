@@ -173,6 +173,9 @@ const manifest = {
         
         {
             plugin: './server/web/home'
+        },
+        {
+            plugin: './server/web/landing'
         },/*
         
         {
