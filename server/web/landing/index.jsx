@@ -4,7 +4,7 @@ const Package = require('../../../package.json');
 const React = require('react');
 
 
-class HomePage extends React.Component {
+class LandingPage extends React.Component {
     render() {
 
         const neck = <link rel='stylesheet' href="/public/pages/new-age.min.css" />;
@@ -155,4 +155,4 @@ class HomePage extends React.Component {
 }
 
 
-module.exports = HomePage;
+module.exports = LandingPage;
