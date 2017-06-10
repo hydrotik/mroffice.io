@@ -156,28 +156,25 @@ const manifest = {
                 routes: { prefix: '/api' }
             }
         },
-        */
         {
             plugin: './server/web/about'
         },
-        /*
         {
             plugin: './server/web/account'
         },
         {
             plugin: './server/web/admin'
-        },*/
+        },
         {
             plugin: './server/web/contact'
         },
-        
         {
             plugin: './server/web/home'
-        },
+        },*/
         {
             plugin: './server/web/landing'
-        },/*
-        
+        },
+        /*
         {
             plugin: './server/web/login'
         },*/

@@ -12,10 +12,13 @@ class LandingPage extends React.Component {
                 <link rel='stylesheet' href="/public/pages/new-age.min.css" />
         );
 
+        const feet = <script src="/public/pages/landing.min.js"></script>;
+
         return (
             <Layout
                 title="New Page"
                 neck={neck}
+                feet={feet}
                 activeTab="home">
 
                 
@@ -48,6 +51,16 @@ class LandingPage extends React.Component {
                         </div>
                     </div>
                 </header>
+
+
+                <section className={ClassNames('bg-primary', 'text-center')}>
+                    <div className="container">
+                        <div className="row">
+                            <div className={ClassNames('col-md-8', 'offset-md-2')} id="app-mount"></div>
+                        </div>
+                    </div>
+                </section>
+
 
                 <section className={ClassNames('download', 'bg-primary', 'text-center')} id="download">
                     <div className="container">

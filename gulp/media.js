@@ -15,7 +15,10 @@ Gulp.task('media', () => {
     const jquery = Gulp.src('./node_modules/jquery/dist/jquery.min.js')
         .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'jquery')));
 
-    const bootstrap = Gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+    const jqueryEasing = Gulp.src('./node_modules/jquery-easing/dist/**/*')
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'jquery-easing')));
+
+    const bootstrap = Gulp.src('./node_modules/bootstrap/**/*')
         .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'bootstrap')));
 
     const fonts = Gulp.src([
@@ -31,5 +34,5 @@ Gulp.task('media', () => {
     const lines = Gulp.src('./node_modules/simple-line-icons/**/*')
         .pipe(Gulp.dest(Path.join('./public', 'media', 'simple-line-icons')));
 
-    return Merge(general, fonts, tether, jquery, bootstrap, lines);
+    return Merge(general, fonts, tether, jquery, jqueryEasing, bootstrap, lines);
 });

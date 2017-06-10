@@ -23,10 +23,11 @@ class DefaultLayout extends React.Component {
                     <title>{this.props.title}</title>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+                    <link href="/public/media/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
                     <link rel="stylesheet" href="/public/media/font-awesome/css/font-awesome.min.css" />
                     <link rel="stylesheet" href="/public/media/simple-line-icons/css/simple-line-icons.css" />
-                    <link rel="stylesheet" href="/public/core.min.css" />
-                    <link rel="stylesheet" href="/public/layouts/default.min.css" />
                     <link rel="shortcut icon" href="/public/media/favicon.ico" />
                     <link rel="stylesheet" href="/public/media/device-mockups/device-mockups.min.css" />
                     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
@@ -66,12 +67,18 @@ class DefaultLayout extends React.Component {
                             </ul>
                         </div>
                     </footer>
-                    <script src="/public/core.min.js"></script>
-                    {this.props.feet}
-
+                    
                     <script src="/public/media/vendor/jquery/jquery.min.js"></script>
                     <script src="/public/media/vendor/tether/tether.min.js"></script>
-                    <script src="/public/media/vendor/bootstrap/bootstrap.min.js"></script>
+                    <script src="/public/media/vendor/jquery-easing/jquery.easing.1.3.umd.min.js"></script>
+                    <script src="/public/media/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+                    <script src="/public/core.min.js"></script>
+                    <script src="/public/pages/navbar.min.js"></script>
+
+                    {this.props.feet}
+
+                    
                 </body>
             </html>
         );

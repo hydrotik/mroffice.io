@@ -5,7 +5,7 @@ exports.register = function (server, options, next) {
 
     server.route({
         method: 'GET',
-        path: '/landing',
+        path: '/',
         handler: function (request, reply) {
 
             return reply.view('landing/index');
