@@ -23,18 +23,29 @@ class DefaultLayout extends React.Component {
                     <title>{this.props.title}</title>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <link rel="stylesheet" href="/public/media/vendor/simple-line-icons/css/simple-line-icons.css" />
                     <link rel="stylesheet" href="/public/core.min.css" />
                     <link rel="stylesheet" href="/public/layouts/default.min.css" />
                     <link rel="shortcut icon" href="/public/media/favicon.ico" />
+                    <link rel="stylesheet" href="/public/media/device-mockups/device-mockups.min.css" />
                     {this.props.neck}
+
+                    <style>{"\
+                    .navbar-toggler {\
+                        z-index: 1;\
+                    }\
+                    \
+                    @media (max-width: 576px) {\
+                        nav > .container {\
+                            width: 100%;\
+                        }\
+                    }\
+                    "}
+                    </style>
                 </head>
                 <body>
                     <Navbar activeTab={this.props.activeTab} />
-                    <div className="page">
-                        <div className="container">
-                            {this.props.children}
-                        </div>
-                    </div>
+                    {this.props.children}
                     <div className="footer">
                         <div className="container">
                             <span className="copyright pull-right">

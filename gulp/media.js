@@ -12,5 +12,8 @@ Gulp.task('media', () => {
     const fonts = Gulp.src('./node_modules/font-awesome/fonts/**')
         .pipe(Gulp.dest(Path.join('./public', 'media', 'font-awesome', 'fonts')));
 
-    return Merge(general, fonts);
+    const lines = Gulp.src('./node_modules/simple-line-icons/**/*')
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'simple-line-icons')));
+
+    return Merge(general, fonts, lines);
 });
