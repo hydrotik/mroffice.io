@@ -22,12 +22,16 @@ class DefaultLayout extends React.Component {
                 <head>
                     <title>{this.props.title}</title>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <link rel="stylesheet" href="/public/media/vendor/simple-line-icons/css/simple-line-icons.css" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                    <link rel="stylesheet" href="/public/media/font-awesome/css/font-awesome.min.css" />
+                    <link rel="stylesheet" href="/public/media/simple-line-icons/css/simple-line-icons.css" />
                     <link rel="stylesheet" href="/public/core.min.css" />
                     <link rel="stylesheet" href="/public/layouts/default.min.css" />
                     <link rel="shortcut icon" href="/public/media/favicon.ico" />
                     <link rel="stylesheet" href="/public/media/device-mockups/device-mockups.min.css" />
+                    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
                     {this.props.neck}
 
                     <style>{"\
@@ -43,23 +47,31 @@ class DefaultLayout extends React.Component {
                     "}
                     </style>
                 </head>
-                <body>
+                <body id="page-top">
                     <Navbar activeTab={this.props.activeTab} />
                     {this.props.children}
-                    <div className="footer">
+                    <footer>
                         <div className="container">
-                            <span className="copyright pull-right">
-                                &copy; {year} Acme, Inc.
-                            </span>
-                            <ul className="links">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                            <p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
+                            <ul className="list-inline">
+                                <li className="list-inline-item">
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a href="#">FAQ</a>
+                                </li>
                             </ul>
-                            <div className="clearfix"></div>
                         </div>
-                    </div>
+                    </footer>
                     <script src="/public/core.min.js"></script>
                     {this.props.feet}
+
+                    <script src="/public/media/vendor/jquery/jquery.min.js"></script>
+                    <script src="/public/media/vendor/tether/tether.min.js"></script>
+                    <script src="/public/media/vendor/bootstrap/bootstrap.min.js"></script>
                 </body>
             </html>
         );

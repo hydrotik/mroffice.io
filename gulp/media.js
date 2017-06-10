@@ -9,11 +9,27 @@ Gulp.task('media', () => {
     const general = Gulp.src('./client/media/**/*')
         .pipe(Gulp.dest(Path.join('./public', 'media')));
 
-    const fonts = Gulp.src('./node_modules/font-awesome/fonts/**')
-        .pipe(Gulp.dest(Path.join('./public', 'media', 'font-awesome', 'fonts')));
+    const tether = Gulp.src('./node_modules/tether/dist/js/tether.min.js')
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'tether')));
+
+    const jquery = Gulp.src('./node_modules/jquery/dist/jquery.min.js')
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'jquery')));
+
+    const bootstrap = Gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'bootstrap')));
+
+    const fonts = Gulp.src([
+            './node_modules/font-awesome/**',
+            '!./node_modules/font-awesome/**/*.map',
+            '!./node_modules/font-awesome/.npmignore',
+            '!./node_modules/font-awesome/*.txt',
+            '!./node_modules/font-awesome/*.md',
+            '!./node_modules/font-awesome/*.json'
+        ])
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'font-awesome')))
 
     const lines = Gulp.src('./node_modules/simple-line-icons/**/*')
-        .pipe(Gulp.dest(Path.join('./public', 'media', 'vendor', 'simple-line-icons')));
+        .pipe(Gulp.dest(Path.join('./public', 'media', 'simple-line-icons')));
 
-    return Merge(general, fonts, lines);
+    return Merge(general, fonts, tether, jquery, bootstrap, lines);
 });
