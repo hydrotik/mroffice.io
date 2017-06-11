@@ -8,9 +8,39 @@ const scrollspy  = require('scrollspy');
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            istop: true
+        };
+
+        this.handleScroll = this.handleScroll.bind(this)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', (e) => this.handleScroll(e));
+    }
+
+    handleScroll(event){
+
+        let i;
+
+        if ($("#mainNav").offset().top > 100) {
+            $("#mainNav").addClass("navbar-shrink");
+            i = false;
+        } else {
+            $("#mainNav").removeClass("navbar-shrink");
+            i = true;
+        }
+
+        this.setState({
+          istop: i
+        });
     }
 
     componentDidMount() {
+
+        window.addEventListener('scroll', this.handleScroll);
+
 
         // GET THIS ALL OUT OF JQUERY!!!
 
@@ -34,13 +64,19 @@ class NavBar extends React.Component {
                 }
             });
 
+            /*
+
             $(window).scroll(function() {
                 if ($("#mainNav").offset().top > 100) {
                     $("#mainNav").addClass("navbar-shrink");
+                    this.props.istop = false;
                 } else {
                     $("#mainNav").removeClass("navbar-shrink");
+                    this.props.istop = true;
                 }
             });
+            */
+
 
             $('#navbarExample>ul>li>a').click(function() {
                 const navbarExample = $('#navbarExample');
@@ -53,13 +89,37 @@ class NavBar extends React.Component {
     componentWillUnmount() {   
     }
 
-    componentWillUnmount() {
-    }
 
 
     render() {
+
+        let istop = this.state.istop;
+
+
+        const active = {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            opacity: '1'
+        }
+
+        const inactive = {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            opacity: '0'
+        }
+
+        const light = (istop) ? active : inactive;
+        const dark = (!istop) ? active : inactive;
+
         return (
-            <a className="navbar-brand" href="#page-top">Start Bootstrap</a>
+            <div className="lockup-logo" style={{position: 'relative', marginTop : '-16px', padding: '0'}}>
+                <a href="#page-top">
+                    <img src="/public/media/logo-header.png" width="102" height="32" style={dark} />
+                    <img src="/public/media/logo-header-inverse.png" width="102" height="32" style={light} />
+                </a>
+            </div>
         );
     }
 }

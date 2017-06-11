@@ -28,6 +28,7 @@ class Navbar extends React.Component {
                 </button>
                 <div className="container">
                     <div id="navbar-mount"></div>
+                    <a className="navbar-brand" href="#page-top">mroffice.io</a>
                     <div className={ClassNames('collapse', 'navbar-collapse')} id="navbarExample">
                         <ul className={ClassNames('navbar-nav', 'ml-auto')}>
                             <li className="nav-item">

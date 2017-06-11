@@ -5,12 +5,14 @@
     @include transition-all;
     @include heading-font;
     .navbar-brand {
-        color: $theme-primary;
+        color: #FFFFFF;
         @include heading-font;
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
         }
+
+        margin-left: 150px; 
     }
     .navbar-toggler {
         font-size: 12px;
@@ -63,7 +65,7 @@
                 color: $gray-darker;
                 &:hover,
                 &:focus {
-                    color: $theme-primary;
+                    color: #FFFFFF;
                 }
             }
             .navbar-nav > li > a,

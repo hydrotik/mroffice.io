@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
 
         return (
             <Layout
-                title="New Page"
+                title="mroffice.io"
                 neck={neck}
                 feet={feet}
                 activeTab="home">
