@@ -94,30 +94,14 @@ class NavBar extends React.Component {
     render() {
 
         let istop = this.state.istop;
-
-
-        const active = {
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            opacity: '1'
-        }
-
-        const inactive = {
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            opacity: '0'
-        }
-
-        const light = (istop) ? active : inactive;
-        const dark = (!istop) ? active : inactive;
+        let light = (!istop) ? 'show' : 'hide';
+        let dark = (istop) ? 'show' : 'hide';
 
         return (
-            <div className="lockup-logo" style={{position: 'relative', marginTop : '-16px', padding: '0'}}>
+            <div className="lockup-logo">
                 <a href="#page-top">
-                    <img src="/public/media/logo-header.png" width="102" height="32" style={dark} />
-                    <img src="/public/media/logo-header-inverse.png" width="102" height="32" style={light} />
+                    <img src="/public/media/logo-header.png" className={light} />
+                    <img src="/public/media/logo-header-inverse.png" className={dark} />
                 </a>
             </div>
         );
