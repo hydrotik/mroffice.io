@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/public/media/fonts/icomoon.eot?p4al6b');
+  src:  url('/public/media/fonts/icomoon.eot?p4al6b#iefix') format('embedded-opentype'),
+    url('/public/media/fonts/icomoon.ttf?p4al6b') format('truetype'),
+    url('/public/media/fonts/icomoon.woff?p4al6b') format('woff'),
+    url('/public/media/fonts/icomoon.svg?p4al6b#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+  content: "\e900";
+  line-height: 32px;
+}
+
+
+
+
+
 // Styling for the navbar
 #mainNav {
     border-color: fade-out($gray-darker, .95);
@@ -5,41 +40,25 @@
     @include transition-all;
     @include heading-font;
     .navbar-brand {
-        color: #FFFFFF;
-        @include heading-font;
-        &:hover,
-        &:focus {
-            color: darken($theme-primary, 10%);
-        }
+            a {
+                color: $gray-darker;
+                @include heading-font;
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            
+            .icon-logo {
+                margin: 0 24px 0 0;
+                padding: 0;
+                font-size: 32px;
+                line-height: 32px;
+            }
     }
 
-
-
-
-    .lockup-logo {
-
-        //position: relative;
-        padding: 0;
-
-        img {
-            width: 102px;
-            height: 32px;
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            margin: 0 24px;
-
-            image-rendering: crisp-edges;
-        }
-
-        img.show {
-            display: block;
-        }
-
-        img.hide {
-            display: none;
-        }
-    }
     .navbar-toggler {
         font-size: 12px;
         padding: 8px 10px;
@@ -71,10 +90,23 @@
         border-color: transparent;
         background-color: transparent;
         .navbar-brand {
-            color: fade(black, 90%);
-            &:hover,
-            &:focus {
-                color: white;
+            
+            a {
+                color: fade-out(white, .3);
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            
+            .icon-logo {
+                margin: 0 24px 0 0;
+                padding: 0;
+                font-size: 32px;
+                line-height: 32px;
             }
         }
         .navbar-nav > li > a,
@@ -88,12 +120,15 @@
             border-color: fade-out($gray-darker, .9);
             background-color: white;
             .navbar-brand {
-                color: $gray-darker;
-                &:hover,
-                &:focus {
-                    color: $theme-primary;
+                a {
+                    color: $gray-darker;
+                    &:hover,
+                    &:focus {
+                        color: #000000;
+                    }
                 }
             }
+
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
                 color: $gray-darker;

@@ -27,8 +27,7 @@ class Navbar extends React.Component {
                     Menu <i className={ClassNames('fa', 'fa-bars')}></i>
                 </button>
                 <div className="container">
-                    <div id="navbar-mount"></div>
-                    <a className="navbar-brand" href="#page-top">mroffice.io</a>
+                    <div className="navbar-brand" id="navbar-mount"></div>
                     <div className={ClassNames('collapse', 'navbar-collapse')} id="navbarExample">
                         <ul className={ClassNames('navbar-nav', 'ml-auto')}>
                             <li className="nav-item">

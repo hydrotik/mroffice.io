@@ -4,6 +4,7 @@ const React = require('react');
 const $  = require('jquery');
 const easing  = require('jquery-easing');
 const scrollspy  = require('scrollspy');
+const ClassNames = require('classnames');
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -93,17 +94,8 @@ class NavBar extends React.Component {
 
     render() {
 
-        let istop = this.state.istop;
-        let light = (!istop) ? 'show' : 'hide';
-        let dark = (istop) ? 'show' : 'hide';
-
         return (
-            <div className="lockup-logo">
-                <a href="#page-top">
-                    <img src="/public/media/logo-header.png" className={light} />
-                    <img src="/public/media/logo-header-inverse.png" className={dark} />
-                </a>
-            </div>
+            <a href="#page-top"><span className={ClassNames('icon-logo')}></span> <span>mroffice.io</span></a>
         );
     }
 }
