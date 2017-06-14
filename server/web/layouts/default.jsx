@@ -33,6 +33,9 @@ class DefaultLayout extends React.Component {
                     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
+
+                    <script src="/public/media/vendor/jquery/jquery.min.js"></script>
+
                     {this.props.neck}
 
                     <style>{"\
@@ -53,7 +56,7 @@ class DefaultLayout extends React.Component {
                     {this.props.children}
                     <footer>
                         <div className="container">
-                            <p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
+                            <p>&copy; 2017 Hydrotik LLC. All Rights Reserved.</p>
                             <ul className="list-inline">
                                 <li className="list-inline-item">
                                     <a href="#">Privacy</a>
@@ -68,7 +71,7 @@ class DefaultLayout extends React.Component {
                         </div>
                     </footer>
                     
-                    <script src="/public/media/vendor/jquery/jquery.min.js"></script>
+                    
                     <script src="/public/media/vendor/tether/tether.min.js"></script>
                     <script src="/public/media/vendor/jquery-easing/jquery.easing.1.3.umd.min.js"></script>
                     <script src="/public/media/vendor/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -28,8 +28,8 @@ class LandingPage extends React.Component {
                             <div className="col-sm-7">
                                 <div className="header-content">
                                     <div className="header-content-inner">
-                                        <h1>New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
-                                        <a href="#download" className="btn btn-outline btn-xl">Start Now for Free!</a>
+                                        <h1>Mr. Office is a new sonic experience that will help you boost productivity!</h1>
+                                        <a href="#download" className="btn btn-outline btn-xl">Start Now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ class LandingPage extends React.Component {
                     </div>
                 </header>
 
-
+                {/*
                 <section className={ClassNames('bg-primary', 'text-center')}>
                     <div className="container">
                         <div className="row">
@@ -60,14 +60,14 @@ class LandingPage extends React.Component {
                         </div>
                     </div>
                 </section>
-
+                */}
 
                 <section className={ClassNames('download', 'bg-primary', 'text-center')} id="download">
                     <div className="container">
                         <div className="row">
                             <div className={ClassNames('col-md-8', 'offset-md-2')}>
                                 <h2 className="section-heading">Discover what all the buzz is about!</h2>
-                                <p>Our app is available on any mobile device! Download now to get started!</p>
+                                <p>Our experience is available on any listening platform! Download now to get started!</p>
                                 <div className="badges">
                                     <a className="badge-link" href="#"><img src="/public/media/google-play-badge.svg" alt="" /></a>
                                     <a className="badge-link" href="#"><img src="/public/media/app-store-badge.svg" alt="" /></a>
@@ -81,7 +81,7 @@ class LandingPage extends React.Component {
                     <div className="container">
                         <div className={ClassNames('section-heading', 'text-center')}>
                             <h2>Unlimited Features, Unlimited Fun</h2>
-                            <p className="text-muted">Check out what you can do with this app theme!</p>
+                            <p className="text-muted">Check out what you can do with this experience!</p>
                             <hr />
                         </div>
                         <div className="row">
@@ -105,15 +105,15 @@ class LandingPage extends React.Component {
                                         <div className="col-lg-6">
                                             <div className="feature-item">
                                                 <i className={ClassNames('icon-screen-smartphone', 'text-primary')}></i>
-                                                <h3>Device Mockups</h3>
-                                                <p className="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                                <h3>Low Frequency Optimization</h3>
+                                                <p className="text-muted">Supported on multiple devices without any need for additional dependencies!</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="feature-item">
                                                 <i className={ClassNames('icon-camera', 'text-primary')}></i>
                                                 <h3>Flexible Use</h3>
-                                                <p className="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                                                <p className="text-muted">New features that allow the experience to be initialized in any sequence!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -121,15 +121,15 @@ class LandingPage extends React.Component {
                                         <div className="col-lg-6">
                                             <div className="feature-item">
                                                 <i className={ClassNames('icon-present', 'text-primary')}></i>
-                                                <h3>Free to Use</h3>
-                                                <p className="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                                                <h3>Cross Platform Support</h3>
+                                                <p className="text-muted">New features being added regularly!</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="feature-item">
                                                 <i className={ClassNames('icon-lock-open', 'text-primary')}></i>
-                                                <h3>Open Source</h3>
-                                                <p className="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                                                <h3>Scalibility</h3>
+                                                <p className="text-muted">Experience scales regardless of volume levels!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@ class LandingPage extends React.Component {
                 <section className="cta">
                     <div className="cta-content">
                         <div className="container">
-                            <h2>Stop waiting.<br />Start building.</h2>
+                            <h2>Stop waiting.<br />Start listening.</h2>
                             <a href="#contact" className={ClassNames('btn', 'btn-outline', 'btn-xl')}>Let's Get Started!</a>
                         </div>
                     </div>

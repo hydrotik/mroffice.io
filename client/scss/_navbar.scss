@@ -39,32 +39,53 @@
     background-color: white;
     @include transition-all;
     @include heading-font;
+
+
     .navbar-brand {
+            
+        .lockup {
+            
+            height: 32px;
+
             a {
-                color: $gray-darker;
-                @include heading-font;
                 text-decoration: none;
+                color: $gray-darker;
                 &:hover,
                 &:focus {
-                    color: white;
+                    color: #000000;
                     text-decoration: none;
                 }
             }
-            
+        
+            span {
+                vertical-align: middle;
+                color: $gray-darker;
+            }
             .icon-logo {
                 margin: 0 24px 0 0;
                 padding: 0;
                 font-size: 32px;
                 line-height: 32px;
+                cursor: pointer;
+                cursor: hand;
+                &:hover,
+                &:focus {
+                    color: #000000;
+                    text-decoration: none;
+                }
             }
+        }
+        
     }
 
     .navbar-toggler {
+        margin-top: 6px;
         font-size: 12px;
         padding: 8px 10px;
         color: $gray-darker;
     }
     .navbar-nav {
+        margin-top: 14px;
         > li {
             > a {
                 font-size: 11px;
@@ -91,24 +112,45 @@
         background-color: transparent;
         .navbar-brand {
             
-            a {
-                color: fade-out(white, .3);
-                text-decoration: none;
+            .lockup {
+                
+                height: 32px;
 
-                &:hover,
-                &:focus {
-                    color: white;
+                a {
                     text-decoration: none;
+                    color: fade-out(white, .3);
+                    &:hover,
+                    &:focus {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            
+                span {
+                    vertical-align: middle;
+                    color: fade-out(white, .3);
+                }
+                .icon-logo {
+                    margin: 0 24px 0 0;
+                    padding: 0;
+                    font-size: 32px;
+                    line-height: 32px;
+                    &:hover,
+                    &:focus {
+                        color: white;
+                        text-decoration: none;
+                    }
                 }
             }
             
-            .icon-logo {
-                margin: 0 24px 0 0;
-                padding: 0;
-                font-size: 32px;
-                line-height: 32px;
-            }
         }
+
+        .navbar-nav {
+            margin: 0;
+            padding: 0;
+            height: 32px;
+        }
+
         .navbar-nav > li > a,
         .navbar-nav > li > a:focus {
             color: fade-out(white, .3);
@@ -127,6 +169,20 @@
                         color: #000000;
                     }
                 }
+
+                .icon-logo {
+                    color: $gray-darker;
+                    &:hover,
+                    &:focus {
+                        color: #000000;
+                    }
+                }
+            }
+
+            .navbar-nav {
+                margin: 0;
+                padding: 0;
+                height: 32px;
             }
 
             .navbar-nav > li > a,

@@ -80,8 +80,12 @@ class NavBar extends React.Component {
 
 
             $('#navbarExample>ul>li>a').click(function() {
+
                 const navbarExample = $('#navbarExample');
-                if(navbarExample.collapse) $('#navbarExample').collapse('hide');
+                if(navbarExample.hasClass('show')) {
+                    $('#navbarExample').removeClass('show');
+
+                }
             });
         });
 
@@ -95,7 +99,7 @@ class NavBar extends React.Component {
     render() {
 
         return (
-            <a href="#page-top"><span className={ClassNames('icon-logo')}></span> <span>mroffice.io</span></a>
+            <div className="lockup"><span className={ClassNames('icon-logo')}></span> <span><a href="#page-top">mroffice.io</a></span></div>
         );
     }
 }
