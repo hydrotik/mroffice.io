@@ -78,6 +78,7 @@ class DefaultLayout extends React.Component {
 
                     <script src="/public/core.min.js"></script>
                     <script src="/public/pages/navbar.min.js"></script>
+                    <script src="/public/pages/form.min.js"></script>
 
                     {this.props.feet}
 

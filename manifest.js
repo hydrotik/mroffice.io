@@ -60,6 +60,9 @@ const manifest = {
                 }
             }
         },
+        {
+            plugin: 'hapi-recaptcha'
+        },
         /*{
             plugin: {
                 register: 'hapi-mongo-models',
