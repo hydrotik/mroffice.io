@@ -42,7 +42,7 @@
     "jquery-easing": "0.0.1",
     "mongo-models": "1.x.x",
     "mongodb": "2.x.x",
-    "nodemailer": "4.x.x",
+    "nodemailer": "^4.0.1",
     "nodemailer-markdown": "1.x.x",
     "object-assign": "4.x.x",
     "poop": "^2.0.2",

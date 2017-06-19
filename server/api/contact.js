@@ -1,8 +1,7 @@
 'use strict';
 const Config = require('../../config');
 const Joi = require('joi');
-const helper = require('sendgrid').mail;
-const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+const nodemailer = require('nodemailer');
 
 
 const internals = {};
@@ -30,31 +29,35 @@ exports.register = function (server, options, next) {
             console.log('phone: ' + request.payload.phone);
 
             const toAddress = (process.env.MAILTO_VARIABLE) ? process.env.MAILTO_VARIABLE : Config.get('/system/toAddress');
+            const subject = Config.get('/projectName') + ' contact form on ';
 
-
-            const fromEmail = new helper.Email('"' + request.payload.name + '" <' + request.payload.email + '>');
-            const toEmail = new helper.Email(toAddress);
-            const subject = Config.get('/projectName') + ' contact form';
-            const content = new helper.Content('text/plain', request.payload.message);
-
-            const mail = new helper.Mail(fromEmail, subject, toEmail, content);
-
-            const sgrequest = sg.emptyRequest({
-              method: 'POST',
-              path: '/v3/mail/send',
-              body: mail.toJSON()
+            let transporter = nodemailer.createTransport({
+                host: 'smtp.sendgrid.net',
+                port: '587',
+                secure: false, // secure:true for port 465, secure:false for port 587
+                auth: {
+                    user: process.env.SENDGRID_USERNAME,
+                    pass: process.env.SENDGRID_PASSWORD,
+                }
             });
 
-            sg.API(sgrequest, function (error, response) {
-              if (error) {
-                console.log(error);
-                return reply(error);
-              }
-              console.log(response.statusCode);
-              console.log(response.body);
-              console.log(response.headers);
+            // setup email data with unicode symbols
+            let mailOptions = {
+                from: '"' + request.payload.name + '" <' + request.payload.email + '>', // sender address
+                to: toAddress, // list of receivers
+                subject: subject, // Subject line
+                text: request.payload.message, // plain text body
+                html: '<b>'+request.payload.message+'</b>' // html body
+            };
 
-              reply({ success: true });
+            // send mail with defined transport object
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    console.log(error);
+                    return reply(error);
+                }
+                console.log('Message %s sent: %s', info.messageId, info.response);
+                reply({ success: true });
             });
             
         }
