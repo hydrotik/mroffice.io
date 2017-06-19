@@ -38,10 +38,10 @@ const manifest = {
         },
         {
             plugin: 'hapi-auth-cookie'
-        },
+        },/*
         {
             plugin: 'poop'
-        },
+        },*/
         {
             plugin: {
                 register: 'crumb',
