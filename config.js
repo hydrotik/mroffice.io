@@ -34,25 +34,25 @@ const config = {
     cookieSecret: {
         $filter: 'env',
         production: process.env.COOKIE_SECRET,
-        $default: '!k3yb04rdK4tz~4qu4~k3yb04rdd0gz!'
+        $default: ''
     },
     nodemailer: {
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
-            user: 'djdonovannyc@gmail.com',
+            user: '',
             pass: process.env.SMTP_PASSWORD
         }
     },
     system: {
         fromAddress: {
             name: 'Mr. Office',
-            address: 'djdonovannyc@gmail.com'
+            address: ''
         },
         toAddress: {
             name: 'Mr. Office',
-            address: 'djdonovannyc@gmail.com'
+            address: ''
         }
     }
 };

@@ -76,3 +76,56 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $gray-darker;
 }
+
+
+
+
+.bamf {
+    font-size: 20em;
+}
+
+
+
+.table-results {
+    thead tr th {
+        background-color: #ddd;
+    }
+    th.stretch,
+    td.stretch {
+        width: 100%;
+    }
+    th.nowrap,
+    td.nowrap {
+        white-space: nowrap;
+    }
+}
+
+
+.panel-danger-zone {
+    border: 1px solid #d9534f;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .panel-heading {
+        color: #eee;
+        background-color: #d9534f;
+    }
+}
+
+
+
+.spinnerContainer {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 16px;
+    width: 16px;
+}
+
+
+/* prevent ios zoom on input */
+select, textarea, input, .form-control {
+  font-size: 16px;
+}

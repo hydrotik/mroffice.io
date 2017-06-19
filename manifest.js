@@ -40,6 +40,9 @@ const manifest = {
             plugin: 'hapi-auth-cookie'
         },
         {
+            plugin: 'poop'
+        },
+        {
             plugin: {
                 register: 'crumb',
                 options: {
@@ -59,11 +62,11 @@ const manifest = {
                     path: './server/web'
                 }
             }
-        },
+        },/*
         {
             plugin: 'hapi-recaptcha'
         },
-        /*{
+        {
             plugin: {
                 register: 'hapi-mongo-models',
                 options: {
@@ -110,7 +113,7 @@ const manifest = {
             options: {
                 routes: { prefix: '/api' }
             }
-        },
+        },*/
         {
             plugin: './server/api/contact',
             options: {
@@ -122,7 +125,7 @@ const manifest = {
             options: {
                 routes: { prefix: '/api' }
             }
-        },
+        },/*
         {
             plugin: './server/api/login',
             options: {

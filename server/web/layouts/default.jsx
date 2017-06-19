@@ -30,9 +30,9 @@ class DefaultLayout extends React.Component {
                     <link rel="stylesheet" href="/public/media/simple-line-icons/css/simple-line-icons.css" />
                     <link rel="shortcut icon" href="/public/media/favicon.ico" />
                     <link rel="stylesheet" href="/public/media/device-mockups/device-mockups.min.css" />
-                    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
-                    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-                    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
+                    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+                    <link href="//fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+                    <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
 
                     <script src="/public/media/vendor/jquery/jquery.min.js"></script>
 
@@ -57,7 +57,7 @@ class DefaultLayout extends React.Component {
                     <footer>
                         <div className="container">
                             <p>&copy; 2017 Hydrotik LLC. All Rights Reserved.</p>
-                            <ul className="list-inline">
+                            {/*<ul className="list-inline">
                                 <li className="list-inline-item">
                                     <a href="#">Privacy</a>
                                 </li>
@@ -67,7 +67,7 @@ class DefaultLayout extends React.Component {
                                 <li className="list-inline-item">
                                     <a href="#">FAQ</a>
                                 </li>
-                            </ul>
+                            </ul>*/}
                         </div>
                     </footer>
                     

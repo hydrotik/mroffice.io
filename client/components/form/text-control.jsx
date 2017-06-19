@@ -17,7 +17,8 @@ const propTypes = {
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
     type: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
+    checked: PropTypes.string
 };
 const defaultProps = {
     type: 'text',
@@ -58,6 +59,7 @@ class TextControl extends React.Component {
                     value={this.props.value}
                     disabled={this.props.disabled ? 'disabled' : undefined}
                     onChange={this.props.onChange}
+                    checked={this.props.checked}
                 />
             </ControlGroup>
         );

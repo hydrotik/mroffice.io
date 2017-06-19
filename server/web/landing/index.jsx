@@ -156,22 +156,31 @@ class LandingPage extends React.Component {
                 </section>
 
                 <section className={ClassNames('contact', 'bg-primary')} id="contact">
-                    <div className="container">
-                        <div className={ClassNames('section-heading', 'text-center')}>
-                            <div id="form-mount" className="form-group"></div>
-                        </div>
+
+                    <div className="container"> 
                         <h2>We <i className={ClassNames('fa', 'fa-heart')}></i> new friends!</h2>
                         <ul className={ClassNames('list-inline', 'list-social')}>
                             <li className={ClassNames('list-inline-item', 'social-twitter')}>
                                 <a href="https://twitter.com/MrOfficeAccount" target="_blank"><i className={ClassNames('fa', 'fa-twitter')}></i></a>
                             </li>
-                            <li className={ClassNames('list-inline-item', 'social-facebook')}>
-                                <a href="#"><i className={ClassNames('fa', 'fa-facebook')}></i></a>
-                            </li>
-                            <li className={ClassNames('list-inline-item', 'social-google-plus')}>
-                                <a href="#"><i className={ClassNames('fa', 'fa-google-plus')}></i></a>
+                            <li className={ClassNames('list-inline-item', 'social-instagram')}>
+                                <a href="#"><i className={ClassNames('fa', 'fa-instagram')}></i></a>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <section className={ClassNames('contact-form', 'bg-primary')} id="contact-form">
+                    <div className="container">
+                        <div className={ClassNames('section-heading', 'text-center')}>
+                            <h2>Send us a note!</h2>
+                            <p>By sending us a note, you agree to be added to our mailing list.<br />We will not share your email with anyone!</p>
+                        </div>
+                        <div className="row">
+                            <div className={ClassNames('col-md-8', 'offset-md-2')}>
+                                <div id="form-mount"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </Layout>
