@@ -24,7 +24,7 @@
     "classnames": "2.x.x",
     "confidence": "3.x.x",
     "crumb": "6.x.x",
-    "dotenv": "4.x.x",
+    "dotenv": "^4.0.0",
     "escape-string-regexp": "1.x.x",
     "font-awesome": "^4.7.0",
     "formsy-react": "^0.19.4",

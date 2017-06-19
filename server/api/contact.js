@@ -47,7 +47,7 @@ exports.register = function (server, options, next) {
 
             sg.API(sgrequest, function (error, response) {
               if (error) {
-                console.log('Error response received');
+                return reply(error);
               }
               console.log(response.statusCode);
               console.log(response.body);

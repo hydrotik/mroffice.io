@@ -1,6 +1,8 @@
 'use strict';
 const Composer = require('./index');
 
+const ENV = require('dotenv').config()
+
 
 Composer((err, server) => {
 
