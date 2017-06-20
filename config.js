@@ -34,25 +34,25 @@ const config = {
     cookieSecret: {
         $filter: 'env',
         production: process.env.COOKIE_SECRET,
-        $default: 'sezEhj(@#05Jxgnd5CTCGktuiXldIae3'
+        $default: '!k3yb04rdK4tz~4qu4~k3yb04rdd0gz!'
     },
     nodemailer: {
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        host: 'smtp.sendgrid.net',
+        port: '587',
+        secure: false, // secure:true for port 465, secure:false for port 587
         auth: {
-            user: '',
-            pass: process.env.SMTP_PASSWORD
+            user: process.env.SENDGRID_USERNAME,
+            pass: process.env.SENDGRID_PASSWORD,
         }
     },
     system: {
         fromAddress: {
             name: 'Mr. Office',
-            address: ''
+            address: process.env.MAILTO_VARIABLE
         },
         toAddress: {
             name: 'Mr. Office',
-            address: ''
+            address: process.env.MAILTO_VARIABLE
         }
     }
 };

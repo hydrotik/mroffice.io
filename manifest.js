@@ -115,10 +115,10 @@ const manifest = {
         },
         {
             plugin: './server/auth'
-        },
+        },*/
         {
             plugin: './server/mailer'
-        },
+        },/*
         {
             plugin: './server/api/accounts',
             options: {

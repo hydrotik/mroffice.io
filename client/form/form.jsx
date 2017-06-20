@@ -1,11 +1,9 @@
 'use strict';
-import ClassNames from 'classnames';
-import React from 'react';
 const Actions = require('./actions');
 const Alert = require('../components/alert.jsx');
 const Button = require('../components/form/button.jsx');
 const ControlGroup = require('../components/form/control-group.jsx');
-
+const React = require('react');
 const Spinner = require('../components/form/spinner.jsx');
 const Store = require('./store');
 const TextControl = require('../components/form/text-control.jsx');
@@ -101,19 +99,24 @@ class Form extends React.Component {
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
-                        inputClasses={{ 'btn': true, 'btn-outline' : true, 'btn-xl': true, 'btn-primary': true }}
+                        inputClasses={{ 'btn-primary': true }}
                         disabled={this.state.loading}>
-                        Send
+
+                        Send message
+                        <Spinner space="left" show={this.state.loading} />
                     </Button>
                 </ControlGroup>
             </fieldset>;
         }
 
         return (
+            <section>
+                <h1 className="page-header">Send a message</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     {alert}
                     {formElements}
                 </form>
+            </section>
         );
     }
 }

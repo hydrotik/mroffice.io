@@ -17,10 +17,8 @@ const jsonFetch = function (options, callback) {
         }
     };
 
-    console.log(cookies.crumb);
-
     if (cookies.crumb) {
-        config.headers['X-CSRF-Token'] = cookies.crumb
+        config.headers['X-CSRF-Token'] = cookies.crumb;
     }
 
     if (options.query) {
