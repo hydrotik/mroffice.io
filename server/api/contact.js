@@ -13,20 +13,9 @@ exports.register = function (server, options, next) {
         method: 'POST',
         path: '/contact',
         config: {
-            validate: {
-                payload: {
-                    name: Joi.string().required().label('Name'),
-                    email: Joi.string().email().required().label('Email'),
-                    message: Joi.string().required().label('Message')
-                }
-            }
+            
         },
         handler: function (request, reply) {
-            console.log('name: ' + request.payload.name);
-            console.log('email: ' + request.payload.email);
-            console.log('message: ' + request.payload.message);
-            console.log('phone: ' + request.payload.phone);
-
             const toAddress = (process.env.MAILTO_VARIABLE) ? process.env.MAILTO_VARIABLE : Config.get('/system/toAddress');
             const subject = Config.get('/projectName') + ' contact form on ';
 
