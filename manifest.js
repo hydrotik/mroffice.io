@@ -89,7 +89,7 @@ const manifest = {
         {
             plugin: {
                 register: 'tv',
-                options: { endpoint: '/awesome' }
+                options: { endpoint: '/console' }
             }
         },/*
         {
