@@ -39,6 +39,7 @@ const manifest = {
         {
             plugin: 'hapi-auth-cookie'
         },
+        /*
         {
             plugin: {
                 register: 'crumb',
@@ -47,6 +48,7 @@ const manifest = {
                 }
             }
         },
+        */
         {
             plugin: 'vision'
         },
