@@ -34,7 +34,7 @@ const config = {
     cookieSecret: {
         $filter: 'env',
         production: process.env.COOKIE_SECRET,
-        $default: ''
+        $default: 'sezEhj(@#05Jxgnd5CTCGktuiXldIae3'
     },
     nodemailer: {
         host: 'smtp.gmail.com',

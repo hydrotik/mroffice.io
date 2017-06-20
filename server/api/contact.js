@@ -17,8 +17,7 @@ exports.register = function (server, options, next) {
                 payload: {
                     name: Joi.string().required().label('Name'),
                     email: Joi.string().email().required().label('Email'),
-                    message: Joi.string().required().label('Message'),
-                    phone: Joi.string().empty('')
+                    message: Joi.string().required().label('Message')
                 }
             }
         },
@@ -30,6 +29,16 @@ exports.register = function (server, options, next) {
 
             const toAddress = (process.env.MAILTO_VARIABLE) ? process.env.MAILTO_VARIABLE : Config.get('/system/toAddress');
             const subject = Config.get('/projectName') + ' contact form on ';
+
+            let test = {
+                success: true,
+                name: request.payload.name,
+                email: request.payload.email,
+                message: request.payload.message
+            }
+            console.log(test);
+            reply(test);
+            return;
 
             let transporter = nodemailer.createTransport({
                 host: 'smtp.sendgrid.net',

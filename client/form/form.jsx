@@ -48,8 +48,7 @@ class Form extends React.Component {
         Actions.sendMessage({
             name: this.input.name.value(),
             email: this.input.email.value(),
-            message: this.input.message.value(),
-            phone: this.input.phone.value()
+            message: this.input.message.value()
         });
     }
 
@@ -97,13 +96,6 @@ class Form extends React.Component {
                     rows="5"
                     hasError={this.state.hasError.message}
                     help={this.state.help.message}
-                    disabled={this.state.loading}
-                />
-                <TextControl
-                    ref={(c) => (this.input.phone = c)}
-                    name="phone"
-                    label=""
-                    type="hidden"
                     disabled={this.state.loading}
                 />
                 <ControlGroup hideLabel={true} hideHelp={true}>
