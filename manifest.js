@@ -36,6 +36,7 @@ const manifest = {
         {
             plugin: 'inert'
         },
+        /*
         {
             plugin: 'hapi-auth-cookie'
         },
@@ -47,6 +48,7 @@ const manifest = {
                 }
             }
         },
+        */
         {
             plugin: 'vision'
         },

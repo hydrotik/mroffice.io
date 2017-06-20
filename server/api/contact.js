@@ -13,7 +13,13 @@ exports.register = function (server, options, next) {
         method: 'POST',
         path: '/contact',
         config: {
-            validate: {}
+            validate: {
+                payload: {
+                    name: Joi.string().required().label('Name'),
+                    email: Joi.string().email().required().label('Email'),
+                    message: Joi.string().required().label('Message')
+                }
+            }
         },
         handler: function (request, reply) {
             console.log('name: ' + request.payload.name);
