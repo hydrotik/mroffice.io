@@ -33,7 +33,7 @@ class LandingPage extends React.Component {
                             <div className="col-sm-7">
                                 <div className="header-content">
                                     <div className="header-content-inner">
-                                        <h1>Mr. Office is a new sonic experience that will help you boost productivity!</h1>
+                                        <h1>Mr. Office is a new sonic experience!</h1>
                                         <a href="#download" className={ClassNames('btn', 'btn-outline', 'btn-xl')}>Start Now!</a>
                                     </div>
                                 </div>

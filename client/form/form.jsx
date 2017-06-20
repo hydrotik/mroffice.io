@@ -23,9 +23,6 @@ class Form extends React.Component {
 
         this.unsubscribeStore = Store.subscribe(this.onStoreChange.bind(this));
 
-        if (this.input.name) {
-            this.input.name.focus();
-        }
     }
 
     componentWillUnmount() {
@@ -101,22 +98,17 @@ class Form extends React.Component {
                         type="submit"
                         inputClasses={{ 'btn-primary': true }}
                         disabled={this.state.loading}>
-
                         Send message
-                        <Spinner space="left" show={this.state.loading} />
                     </Button>
                 </ControlGroup>
             </fieldset>;
         }
 
         return (
-            <section>
-                <h1 className="page-header">Send a message</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     {alert}
                     {formElements}
                 </form>
-            </section>
         );
     }
 }
