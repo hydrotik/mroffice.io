@@ -16,14 +16,14 @@ class LandingPage extends React.Component {
                 <link rel='stylesheet' href="/public/pages/new-age.min.css" />
         );
 
-        const feet = <script src="/public/pages/landing.min.js"></script>;
+        // const feet = <script src="/public/pages/landing.min.js"></script>;
 
 
         return (
             <Layout
                 title="mroffice.io"
                 neck={neck}
-                feet={feet}
+                // feet={feet}
                 activeTab="home">
 
                 
