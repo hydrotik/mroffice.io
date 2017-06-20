@@ -38,10 +38,7 @@ const manifest = {
         },
         {
             plugin: 'hapi-auth-cookie'
-        },/*
-        {
-            plugin: 'poop'
-        },*/
+        },
         {
             plugin: {
                 register: 'crumb',
@@ -61,6 +58,38 @@ const manifest = {
                     relativeTo: __dirname,
                     path: './server/web'
                 }
+            }
+        },
+        {
+            plugin: {
+                register: 'hapi-console',
+                options: {
+                
+                    // ignore /ignore/me route 
+                    ignore: ['/ignore/me'],
+             
+                    // show custom data about the request 
+                    custom: {
+                        // shows custom data about auth.credentials.uid as 'uid: <>' 
+                        'auth.credentials.uid': true,  
+                        
+                        // shows a JSON.stringify version of query 
+                        'query': true, 
+                        
+                        // executes the function and uses the output where x is request.headers 
+                        'headers': (x) => JSON.stringify(x).replace(/"/g, '') 
+                    },
+                    
+                    // if true it uses the full path of the key to display the data  
+                    // if false it uses just the last property key to display data 
+                    customFullLengthKey: false
+                }
+            }
+        },
+        {
+            plugin: {
+                register: 'tv',
+                options: { endpoint: '/awesome' }
             }
         },/*
         {

@@ -33,6 +33,7 @@
     "handlebars": "4.x.x",
     "hapi": "16.x.x",
     "hapi-auth-cookie": "7.x.x",
+    "hapi-console": "^0.6.5",
     "hapi-mongo-models": "6.x.x",
     "hapi-react-views": "9.x.x",
     "hapi-recaptcha": "^0.2.0",
@@ -57,9 +58,10 @@
     "simple-line-icons": "^2.4.1",
     "slug": "0.9.x",
     "tether": "^1.4.0",
+    "tv": "^6.1.0",
     "uuid": "3.x.x",
     "vision": "4.x.x",
-    "visionary": "6.x.x"
+    "visionary": "^6.0.2"
   },
   "devDependencies": {
     "babel-core": "6.x.x",
