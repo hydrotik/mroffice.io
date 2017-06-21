@@ -39,7 +39,6 @@ const manifest = {
         {
             plugin: 'hapi-auth-cookie'
         },
-        /*
         {
             plugin: {
                 register: 'crumb',
@@ -48,7 +47,6 @@ const manifest = {
                 }
             }
         },
-        */
         {
             plugin: 'vision'
         },
@@ -61,7 +59,7 @@ const manifest = {
                     path: './server/web'
                 }
             }
-        },
+        },/*
         {
             plugin: {
                 register: 'hapi-console',
@@ -87,7 +85,7 @@ const manifest = {
                     customFullLengthKey: false
                 }
             }
-        },
+        },*/
         {
             plugin: {
                 register: 'tv',
@@ -114,10 +112,10 @@ const manifest = {
                     autoIndex: Config.get('/hapiMongoModels/autoIndex')
                 }
             }
-        },
+        },*/
         {
             plugin: './server/auth'
-        },*/
+        },
         {
             plugin: './server/mailer'
         },/*
