@@ -72,12 +72,12 @@ class LandingPage extends React.Component {
                         <div className="row">
                             <div className={ClassNames('col-md-8', 'offset-md-2')}>
                                 <h2 className="section-heading">Discover what all the buzz is about!</h2>
-                                <p>Our experience is available on any listening platform! Download now to get started!</p>
-                                <div className="badges">
+                                <p>Our experience is available on any listening platform! <strong>Coming soon!</strong>{/*Download now to get started!*/}</p>
+                                {/*<div className="badges">
                                     <a className="badge-link" href="#"><img src="/public/media/google-play-badge.svg" alt="Download Mr. Office by DJ Donovan on Google Play" /></a>
                                     <a className="badge-link" href="#"><img src="/public/media/Get_it_on_iTunes_Badge_US_1114.svg" alt="Download Mr. Office by DJ Donovan on iTunes" /></a>
                                     <a className="badge-link" href="#"><img src="/public/media/btn-spotify.svg" alt="Stream Mr. Office by DJ Donovan on Spotify" /></a>
-                                </div>
+                                </div>*/}
                             </div>
                         </div>
                     </div>

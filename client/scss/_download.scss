@@ -9,16 +9,23 @@ section.download {
     .badges {
         .badge-link {
             display: block;
+            margin-right: 10px;
             margin-bottom: 25px;
             &:last-child {
                 margin-bottom: 0;
+                margin-right: 0;
             }
             img {
                 height: 60px;
             }
             @media(min-width: 768px) {
                 display: inline-block;
+                margin-right: 15px;
                 margin-bottom: 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
