@@ -166,6 +166,12 @@ class LandingPage extends React.Component {
                             <li className={ClassNames('list-inline-item', 'social-instagram')}>
                                 <a href="https://www.instagram.com/_dj_donovan_/" target="_blank"><i className={ClassNames('fa', 'fa-instagram')}></i></a>
                             </li>
+                            <li className={ClassNames('list-inline-item', 'social-soundcloud')}>
+                                <a href="https://soundcloud.com/djdonovanofficial" target="_blank"><i className={ClassNames('fa', 'fa-soundcloud')}></i></a>
+                            </li>
+                            <li className={ClassNames('list-inline-item', 'social-youtube')}>
+                                <a href="https://www.youtube.com/user/djdonovan" target="_blank"><i className={ClassNames('fa', 'fa-youtube')}></i></a>
+                            </li>
                         </ul>
                     </div>
                 </section>
