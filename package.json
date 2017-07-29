@@ -52,6 +52,8 @@
     "react": "15.x.x",
     "react-form": "^1.2.8",
     "react-ga": "^2.2.0",
+    "react-google-analytics": "^0.2.0",
+    "react-google-analytics-lite": "0.0.1",
     "react-recaptcha": "^2.3.1",
     "react-scroll": "^1.5.2",
     "react-scrollspy": "^3.1.2",

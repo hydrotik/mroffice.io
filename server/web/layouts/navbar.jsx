@@ -3,7 +3,7 @@ const ClassNames = require('classnames');
 const PropTypes = require('prop-types');
 const React = require('react');
 
-const ReactGA = require('react-ga');
+// const ReactGA = require('react-ga');
 
 const propTypes = {
     activeTab: PropTypes.string
@@ -16,19 +16,23 @@ class Navbar extends React.Component {
         super(props);
     }
 
+
+    /*
     componentDidMount() {
         ReactGA.initialize('UA-103627473-1');
         ReactGA.pageview('/');
 
     }
-
+    */
 
     tabClass(tab) {
 
+        /*
         ReactGA.event({
             category: 'Navigation',
             action: 'Clicked ' + tab
         });
+        */
 
         return ClassNames({
             active: this.props.activeTab === tab

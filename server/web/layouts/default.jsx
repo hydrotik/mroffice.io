@@ -3,9 +3,6 @@ const Navbar = require('./navbar.jsx');
 const PropTypes = require('prop-types');
 const React = require('react');
 
-const ReactGA = require('react-ga');
-
-
 
 const propTypes = {
     activeTab: PropTypes.string,
@@ -16,9 +13,6 @@ const propTypes = {
 };
 
 class DefaultLayout extends React.Component {
-
-    
-
     render() {
 
         const year = new Date().getFullYear();
