@@ -9,6 +9,7 @@ const Store = require('./store');
 const TextControl = require('../components/form/text-control.jsx');
 const TextareaControl = require('../components/form/textarea-control.jsx');
 
+const ReactGA = require('react-ga');
 
 class Form extends React.Component {
     constructor(props) {
@@ -39,6 +40,11 @@ class Form extends React.Component {
 
         event.preventDefault();
         event.stopPropagation();
+
+        ReactGA.event({
+            category: 'Contact Form',
+            action: 'Submitted by ' + this.input.email.value()
+        });
 
         Actions.sendMessage({
             name: this.input.name.value(),
@@ -93,6 +99,7 @@ class Form extends React.Component {
                     help={this.state.help.message}
                     disabled={this.state.loading}
                 />
+                <input type="hidden" name="crumb" value="{{crumb}}"/>
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
